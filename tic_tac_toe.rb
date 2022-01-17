@@ -45,6 +45,8 @@ class GameBoard < Player
     @continue_game = true
   end
 
+  private
+
   # Prints the current state of the board
   def game_board_state
     puts "
@@ -54,6 +56,8 @@ class GameBoard < Player
       ---+---+---
        #{@markers[6]} | #{@markers[7]} | #{@markers[8]}\n\n"
   end
+
+  public
 
   # Determines if another round will commence
   def game_round?
@@ -65,6 +69,8 @@ class GameBoard < Player
     @continue_game = false
     replay_game
   end
+
+  private
 
   # Decides whether it's player 1 or player 2's turn
   def player_turn
